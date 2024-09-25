@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    background: linear-gradient(to right, #f0e5d8, #f7f7f7);
+    color: #333;
+}
+
+header {
+    background-color: #f1c40f;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 0 0 20px 20px;
+    transform: rotate(-2deg);
+    opacity: 0.9;
+    transition: opacity 0.5 ease;
+
+}
+
+header :hover {
+    opacity: 1;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    animation: bounce 1s infinite;
+}
+
+p {
+    font-size: 1.2rem;
+
+}
+
+section {
+    margin: 2rem;
+}
+
+.intro h2 {
+    font-size: 2rem;
+    color: #f1c40f;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.intro h2:hover {
+    color: #000;
+    transform: scale(1.05);
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-wrapper {
+    position: relative;
+}
+
+.carousel-slides {
+    display: flex;
+    width: 300%;
+    transition: transform 0.5 ease-in-out;
+}
+
+.carousel-slide {
+    width: 100%;
+    flex: 1 0 100%;
+}
+
+.carousel-slide img {
+    width: 100%;
+    display: block;
+}
+
+.carousel-controls {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.carousel-dot {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    background-color: #000;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: backgorund-color 0.3s ease;
+}
+
+input[type="radio"] {
+    display: none;
+
+}
+
+#slide1:checked~.carousel-slides {
+    transform: translateX(0%);
+
+}
+
+#slide2:checked~.carousel-slides {
+    transform: translateX(33.333%);
+
+}
+
+#slide1:checked~.carousel-slides {
+    transform: translateX(66.666%);
+
+}
+
+#slide1:checked~.carousel-controls #dot1,
+#slide2:checked~.carousel-controls #dot2,
+#slide3:checked~.carousel-controls #dot3 {
+    background-color: #f1c40f;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 1rem;
+    padding: 2rem;
+    width: 300px;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover{
+    transform: scale(1.05);
+}
+
+.card h3{
+    font-size: 1.5rem;
+    color: #333;
+    transition: color 0.3s ease, transform 0.3 ease;
+}
+
+.card:hover{
+    color: #f1c40f;
+    transform: scale(1.1);
+}
+
+.resources h2{
+    font-size: 2rem;
+    color: #f1c40f;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.resources h2:hover{
+    color: #000;
+    transform: scale(1.05);
+        
+}
+
+.testimonials h2{
+    font-size: 2rem;
+    color: #f1c40f;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.testimonials h2:hover{
+    color: #000;
+    transform: scale(1.05);
+}
+
+.contact h2{
+    font-size: 2rem;
+    color: #f1c40f;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease, trasform 0.3s ease;
+}
+
+.contact h2:hover{
+    color: #000;
+    transform: scale(1.05);
+}
+
+.resources{
+   list-style-type: none;
+}
+
+.resources{
+    margin-bottom: 0.5rem;
+}
+
+.resources a{
+    color: #f1c40f;
+    text-decoration: none;
+}
+
+.resources a:hover{
+    text-decoration: underline;
+}
+
+.testimonials-card{
+    background: #fff;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+ 
+.testimonials-card{
+    margin-bottom: 1rem;
+}
+
+.contact{
+    background: #fff;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+form{
+    display: flex;
+    flex-direction: colum;
+}
+
+form label{
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+form input, form textarea{
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form textarea{
+    resize: vertical;
+}
+
+button{
+    padding: 0.75;
+    background-color: #f1c40f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover{
+    background-color: #e0b700;
+}
+
+footer{
+    background-color: #e0b700;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@keyframe bounce{
+    0%, 20%, 50%, 80%, 100%{
+        transform: translateY(0);
+    }
+    40%{
+        transform: translateY(-30px);
+    }
+    60%{
+        transform: translateY(-15px);
+    }
+}
